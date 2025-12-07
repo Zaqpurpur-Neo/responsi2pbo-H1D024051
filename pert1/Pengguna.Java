@@ -11,8 +11,6 @@ public class Pengguna {
 		this.umur = umur;
 		this.beratBadan = beratBadan;
 		this.tinggiBadan = tinggiBadan;
-
-		faktorAktivitas = 20;
 	}
     
     double hitungBMI() {
@@ -51,7 +49,5 @@ Kebutuhan Kalori: 720 kal/hari
 		tampilKategori();
 		System.out.printf("Kebutuhan Kategori: %f kal/hari\n", hitungKalori());
 		System.out.println("====================================");
-		
-		tampilKategori();
     }
 }
