@@ -63,6 +63,7 @@ public class KapalEksplorasi extends KendaraanGalaksi {
 		} else if(newLevelEnergi > 100) {
 			int sisa = Math.abs(100 - newLevelEnergi);
 			System.out.printf("Energi sudah full 100%%, sisa tambahan energi yang tidak terpakai %d%%\n", sisa);
+			setLevelEnergi(100);
 		}
 	}
 

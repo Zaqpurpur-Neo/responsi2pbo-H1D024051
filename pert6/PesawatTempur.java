@@ -63,7 +63,7 @@ public class PesawatTempur extends KendaraanGalaksi {
 		int newLevelEnergi = getLevelEnergi() + jumlah;
 		if(newLevelEnergi <= 100) {
 			setLevelEnergi(newLevelEnergi);
-			System.out.printf("Pesawat Tempur mengisi energi sebanyak %d%% | Energi Saat ini: %d%%\n", getNamaKendaraan(), jumlah, getLevelEnergi());
+			System.out.printf("Pesawat Tempur mengisi energi sebanyak %d%% | Energi Saat ini: %d%%\n", jumlah, getLevelEnergi());
 		} else if(newLevelEnergi > 100) {
 			int sisa = Math.abs(100 - newLevelEnergi);
 			System.out.printf("Energi sudah full 100%%, sisa tambahan energi yang tidak terpakai %d%%\n", sisa);
