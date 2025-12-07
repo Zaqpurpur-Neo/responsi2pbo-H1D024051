@@ -8,7 +8,9 @@ public abstract class KendaraanGalaksi {
     // - String namaKendaraan
     // - int levelEnergi         (0–100)
     // - int kapasitasPenumpang
-
+	private String namaKendaraan;
+	private int levelEnergi = 100;
+	private int kapasitasPenumpang;
 
     // ==========================================================
     // CONSTRUCTOR
@@ -19,7 +21,10 @@ public abstract class KendaraanGalaksi {
     //   - namaKendaraan
     //   - kapasitasPenumpang
     // levelEnergi default = 100.
-
+	public KendaraanGalaksi(String namaKendaraan, int kapasitasPenumpang) {
+		this.namaKendaraan = namaKendaraan;
+		this.kapasitasPenumpang = kapasitasPenumpang;
+	}
 
     // ==========================================================
     // GETTER
@@ -28,7 +33,21 @@ public abstract class KendaraanGalaksi {
     // TODO: Getter namaKendaraan
     // TODO: Getter levelEnergi
     // TODO: Getter kapasitasPenumpang
+	public String getNamaKendaraan() {
+		return namaKendaraan;
+	}
 
+	public int getLevelEnergi() {
+		return levelEnergi;
+	}
+
+	public int getKapasitasPenumpang() {
+		return kapasitasPenumpang;	
+	}
+
+	public void setLevelEnergi(int levelEnergi) {
+		this.levelEnergi = levelEnergi;
+	}
 
     // ==========================================================
     // METHOD BIASA
@@ -38,18 +57,17 @@ public abstract class KendaraanGalaksi {
     // Method final tampilStatus()
     // Format:
     // "[namaKendaraan] | Energi: [levelEnergi]% | Kapasitas: [kapasitasPenumpang] awak"
-
+	public void tampilStatus() {
+		System.out.printf("%s | Energi: %d%% | Kapasitas: %d awak", namaKendaraan, levelEnergi, kapasitasPenumpang);
+	}
 
     // ==========================================================
     // ABSTRACT METHOD (WAJIB DIIMPLEMENTASI SUBCLASS)
     // ==========================================================
 
-    // TODO:
-    // abstract void aktifkanMesin();
+    abstract void aktifkanMesin();
 
-    // TODO:
-    // abstract void jelajah(int jarak);
+    abstract void jelajah(int jarak);
 
-    // TODO:
-    // abstract void isiEnergi(int jumlah);
+    abstract void isiEnergi(int jumlah);
 }

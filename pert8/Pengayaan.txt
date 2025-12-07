@@ -6,3 +6,10 @@ Setelah anda menyelesaikan kode, tolong jawab pertanyaan dibawah ini ya =
 3. Apa perbedaan mendasar antara extends dan implements dalam konteks interface, jika dilihat secara konsep tanpa melihat contoh kode?
 4. Apa alasan diperkenalkannya default method dalam interface, dan bagaimana fitur ini memengaruhi keberlangsungan (compatibility) suatu sistem yang sudah berjalan?
 5. Bagaimana konsep multiple interface memperluas fleksibilitas desain tanpa menimbulkan masalah kompleksitas yang biasa muncul pada multiple inheritance?
+
+Jawaban:
+1. Tujuan utama interface adalah menyediakan kontrak perilaku yang harus dipatuhi oleh class yang mengimplementasikannya. Interface membantu menyatakan “apa yang harus bisa dilakukan” tanpa menentukan “bagaimana caranya,” sehingga class apa pun dapat memenuhi kontrak tersebut dengan cara masing - masing.
+2. Interface dapat memiliki banyak implementasi karena ia tidak mengikat cara kerja. Secara konseptual, ini memungkinkan berbagai objek berbeda memiliki kemampuan yang sama, tetapi dengan perilaku yang spesifik sesuai kebutuhan desain masing-masing.
+3. Extends melambangkan pewarisan sifat (inheritance), di mana sebuah entitas mewarisi karakteristik dari parent-nya. Implements melambangkan pemenuhan kontrak, di mana sebuah class menyatakan bahwa ia mampu melakukan semua perilaku yang ditentukan oleh interface. Secara konsep, extends mewarisi, implements memenuhi.
+4. Default method diperkenalkan agar interface bisa berkembang tanpa merusak class-class lama yang sudah mengimplementasikannya. Dengan adanya default method, interface dapat menambah perilaku baru tanpa memaksa semua implementasi lama melakukan perubahan, sehingga kompatibilitas sistem tetap terjaga.
+4. Multiple interface memberi fleksibilitas karena sebuah class dapat “memiliki banyak kemampuan” tanpa mewarisi struktur atau atribut yang rumit. Ini menghindari masalah multiple inheritance—seperti konflik pewarisan atribut—karena interface tidak membawa state, hanya kontrak perilaku. Hasilnya, desain tetap fleksibel tanpa menambah kompleksitas.
